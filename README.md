@@ -6,123 +6,161 @@ A modern, interactive web application that demonstrates the capabilities of a po
 
 ## ✨ Features
 
-- **🔍 Intelligent Search**: Search the web and get structured results
-- **📄 Article Extraction**: Extract clean article content from any URL
-- **📝 Markdown Conversion**: Convert web pages to markdown format
-- **🏗️ Clean HTML**: Get sanitized HTML content
-- **📋 Citation Generation**: Generate proper citations for web content
-- **⚡ Real-time Processing**: Lightning-fast API responses with live status updates
-- **🎨 Modern UI**: Animated particles, gradient borders, and glassmorphism effects
+* **🔍 Intelligent Search**: Search the web and get structured results
+* **📄 Article Extraction**: Extract clean article content from any URL
+* **📝 Markdown Conversion**: Convert web pages to markdown format
+* **🏗️ Clean HTML**: Get sanitized HTML content
+* **📋 Citation Generation**: Generate proper citations for web content
+* **⚡ Real-time Processing**: Lightning-fast API responses with live status updates
+* **🎨 Modern UI**: Animated particles, gradient borders, and glassmorphism effects
 
 ## 🎯 API Endpoints
 
-### `/search` - Web Search
-Search the web and retrieve structured results with customizable limits.
+### `/search` — Web Search
 
-**Parameters:**
-- `query` (string): Search query
-- `limit` (number): Maximum number of results (1-50)
+Retrieve structured search results with customizable limits.
 
-### `/extract` - Content Extraction
-Extract content from web pages in various formats.
+**Query Parameters:**
 
-**Supported Actions:**
-- `article` - Extract article content
-- `markdown` - Convert to markdown
-- `html` - Get clean HTML
-- `citation` - Generate citation
+* `q` (string) — Search query (required)
+* `limit` (number) — Maximum number of results (1–50, default: 10)
+
+---
+
+### `/article` — Article Extraction
+
+Extract article content with readability parsing, metadata, and citation-ready info.
+
+**Query Parameters:**
+
+* `url` (string) — Target webpage URL (required)
+
+---
+
+### `/markdown` — Markdown Conversion
+
+Convert webpage content into **Markdown format**.
+
+**Query Parameters:**
+
+* `url` (string) — Target webpage URL (required)
+
+---
+
+### `/html` — Clean HTML Extraction
+
+Get **sanitized HTML** content stripped of ads, scripts, and extraneous elements.
+
+**Query Parameters:**
+
+* `url` (string) — Target webpage URL (required)
+
+---
+
+### `/citation` — Citation Generator
+
+Generate properly formatted **APA, MLA, and Chicago citations** with metadata.
+
+**Query Parameters:**
+
+* `url` (string) — Target webpage URL (required)
+
+---
 
 ## 🚀 Performance Stats
 
-- **99.9%** Uptime
-- **<200ms** Response Time
-- **90%** Rate Limit Bypass Success
+* **99.9%** Uptime
+* **<200ms** Response Time
+* **90%** Rate Limit Bypass Success
 
 ## 🛠️ Technology Stack
 
-- **HTML5** - Modern semantic markup
-- **CSS3** - Advanced styling with animations and effects
-- **JavaScript** - Interactive functionality
-- **Tailwind CSS** - Utility-first CSS framework
-- **Custom Animations** - Particle effects and smooth transitions
+* **Node.js & Express** — Backend API server
+* **Axios** — HTTP requests
+* **Cheerio & jsdom** — DOM parsing
+* **Mozilla Readability** — Article extraction
+* **Turndown** — HTML → Markdown conversion
+* **Tailwind CSS** — Frontend styling
+* **Custom Animations** — Particle effects and smooth transitions
 
 ## 📁 Project Structure
 
 ```
 scraper-api-demo/
-├── index.html          # Main HTML file
-├── style.css           # Custom CSS styles and animations
-├── script.js           # JavaScript functionality
+├── public/             # Frontend files (index.html, CSS, JS)
+├── server.js           # Main Express API server
+├── package.json        # Project dependencies
 ├── tailwind.config.js  # Tailwind CSS configuration
-└── README.md          # This file
+└── README.md           # This file
 ```
 
 ## 🔧 Setup & Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd scraper-api-demo
    ```
 
-2. **Open in browser**
+2. **Install dependencies**
+
    ```bash
-   # Simply install and start
-   npm install && npm start
+   npm install
    ```
+
+3. **Start the server**
+
+   ```bash
+   npm start
+   ```
+
+4. **Access in browser**
+
+   * API: [http://localhost:3000](http://localhost:3000)
+   * UI: [http://localhost:3000](http://localhost:3000) (served from `/public`)
+
 ## 💻 Usage
 
 1. **Search Functionality**
-   - Enter a search query in the search form
-   - Set the desired result limit (1-50)
-   - Click "Fetch Search Results"
 
-2. **URL Extraction**
-   - Paste a URL in the article URL field
-   - Choose extraction type:
-     - Get Article (clean article content)
-     - Get Markdown (markdown format)
-     - Clean HTML (sanitized HTML)
-     - Get Citation (formatted citation)
+   * Hit `/search?q=your+query&limit=10`
 
-3. **View Results**
-   - All API responses appear in the live response panel
-   - Response time and size are tracked in real-time
-   - JSON formatting with syntax highlighting
+2. **Article Extraction**
 
-## 🎯 Key Components
+   * Hit `/article?url=https://example.com`
 
-### Forms
-- **Search Form**: Query input with result limit
-- **URL Form**: URL input with multiple extraction options
+3. **Markdown Conversion**
 
-### Response Display
-- **Live Status**: Real-time connection indicator
-- **JSON Viewer**: Formatted response display
-- **Performance Metrics**: Response time and size tracking
+   * Hit `/markdown?url=https://example.com`
 
-### UI Elements
-- **Gradient Cards**: Interactive form containers
-- **Status Indicators**: Live connection and loading states
-- **Performance Dashboard**: Stats display with icons
+4. **Clean HTML**
+
+   * Hit `/html?url=https://example.com`
+
+5. **Citation Generation**
+
+   * Hit `/citation?url=https://example.com`
+
+All responses are JSON or text depending on the endpoint.
 
 ## 🔮 Future Enhancements
 
-- [ ] API key authentication
-- [ ] Response caching
-- [ ] Export functionality (JSON, CSV)
-- [ ] Dark/light theme toggle
-- [ ] Advanced search filters
-- [ ] Batch processing
-- [ ] Response history
-- [ ] Real-time notifications
+* [ ] API key authentication
+* [ ] Response caching
+* [ ] Export functionality (JSON, CSV)
+* [ ] Dark/light theme toggle
+* [ ] Advanced search filters
+* [ ] Batch processing
+* [ ] Response history
+* [ ] Real-time notifications
 
 ## 📱 Browser Compatibility
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+* Chrome 90+
+* Firefox 88+
+* Safari 14+
+* Edge 90+
 
 ## 🤝 Contributing
 
@@ -134,13 +172,7 @@ scraper-api-demo/
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built with modern web technologies
-- Inspired by cutting-edge UI/UX design trends
-- Powered by advanced web scraping capabilities
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
