@@ -1,1 +1,29 @@
-{"name":"scraper-api","version":"1.0.0","description":"A local API that mimics Google search and article scraping.","main":"index.js","type":"module","scripts":{"start":"node index.js","test":"echo \"Error: no test specified\" && exit 1"},"keywords":["api","scraper","express","cheerio","readability"],"author":"Shayaan Hooda","license":"MIT","dependencies":{"@mozilla/readability":"^0.6.0","axios":"^1.10.0","cheerio":"^1.1.0","express":"^5.1.0","jsdom":"^26.1.0","turndown":"^7.2.0"}}
+{
+  "name": "scraper-api",
+  "version": "1.0.0",
+  "description": "A local API that mimics Google search and article scraping.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "scraper",
+    "express",
+    "cheerio",
+    "readability"
+  ],
+  "author": "Shayaan Hooda",
+  "license": "MIT",
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "axios": "^1.10.0",
+    "cheerio": "^1.1.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsdom": "^26.1.0",
+    "turndown": "^7.2.0"
+  }
+}
