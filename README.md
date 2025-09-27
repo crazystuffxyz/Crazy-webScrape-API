@@ -173,14 +173,3 @@ All responses are JSON or text depending on the endpoint.
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-  <p>Built with ❤️ using modern web technologies</p>
-  <p>
-    <a href="#">Documentation</a> •
-    <a href="#">API Reference</a> •
-    <a href="#">Support</a>
-  </p>
-</div>
